@@ -3,7 +3,8 @@
 }
 
 body {
-    position: relative;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
 }
 
 .container {
