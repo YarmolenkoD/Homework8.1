@@ -5,6 +5,7 @@
 body {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
+    position: relative;
 }
 
 .container {
