@@ -60,12 +60,14 @@ function addTag(position) {
     selected: false
   }
   arrayOfTags.push(tag)
+  console.log(11111, arrayOfTags)
   updateState(arrayOfTags)
 }
 
 updateState(arrayOfTags)
 
 container.addEventListener('dblclick', function (event) {
+  event.stopPropagation()
   var element = event.target.parentNode
   if (element.classList.contains('tag-item')) {
     var newArrayOfTags = []
@@ -82,6 +84,9 @@ container.addEventListener('dblclick', function (event) {
     arrayOfTags = newArrayOfTags
     updateState(newArrayOfTags)
   } else if (event.target.classList.contains('tags-wrap')) {
+    // var left
+    // var top
+
     var position = {
       left: event.pageX - event.target.offsetLeft - 30,
       top: event.pageY - event.target.offsetTop - 20
